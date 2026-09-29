@@ -9,7 +9,7 @@ import { Contact } from './components/contact/contact';
 
 export const routes: Routes = [
 { path: '', component: Home },
-{ path: 'about', component: About },
+{ path: 'about-me', component: About },
 { path: 'skills', component: Skills },
 { path: 'projects', component: Projects },
 { path: 'contact', component: Contact }
