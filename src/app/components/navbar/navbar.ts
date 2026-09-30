@@ -16,6 +16,18 @@ export class Navbar {
     {
     redirection: "/about-me",
     name: "Sobre mi"
+    },
+    {
+    redirection: "/skills",
+    name: "Habilidades"
+    },
+    {
+    redirection: "/projects",
+    name: "Proyectos"
+    },
+    {
+    redirection: "/contact",
+    name: "Contacto"
     }
   ]
 }
