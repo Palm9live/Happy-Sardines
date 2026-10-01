@@ -11,7 +11,7 @@ export class Navbar {
    navbar = [
     {
     redirection: "/",
-    name: "inicio"
+    name: "Inicio"
     },
     {
     redirection: "/about-me",
