@@ -1,4 +1,9 @@
-section {
-    max-width: 900px;
-    margin: auto;
+.profile-image {
+    width: 220px;
+    border-radius: 50%;
+}
+
+h2 {
+    color: #0d6efd;
+    margin-bottom: 1rem;
 }
