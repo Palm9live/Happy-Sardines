@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-projects',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
-export class Projects {}
+export class Projects {
+  constructor(
+    public languageService: LanguageService
+  ) {}
+}
+

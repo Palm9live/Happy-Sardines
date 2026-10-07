@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
-export class Contact {}
+export class Contact {
+  constructor(
+    public languageService: LanguageService
+  ) {}
+}

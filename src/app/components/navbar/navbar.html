@@ -18,11 +18,26 @@
         @for (item of navbar; track $index) {
         <li class="nav-item">
           <a class="nav-link" [routerLink]="item.redirection">
-            {{ item.name }}
+            {{ LanguageService.translate(item.key) }}
           </a>
         </li>
         }
       </ul>
+      <div class="ms-auto">
+
+        <button class="btn btn-outline-primary me-2" (click)="LanguageService.changeLanguage('es')">
+
+          Es
+        </button>
+
+        <button class="btn btn-outline-primary" (click)="LanguageService.changeLanguage('en')">
+
+          EN
+        </button>
+
+      </div>
     </div>
   </div>
+
+
 </nav>

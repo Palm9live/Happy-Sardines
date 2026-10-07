@@ -1,45 +1,39 @@
 <section class="container">
     
     <header class="text-center my-5">
-        <h2>Contacto</h2>
+        <h1>
+            {{ languageService.translate('CONTACT_TITLE') }}
+        </h1>
     </header>
     
     <section class="row g-4">
         
+        <!-- Tarjeta de Gmail -->
         <article class="col-md-4">
-            
-            <section class="card h-100 text-center">
-                
-                <section class="card-body">
-                    
-                    <h3>Email</h3>
-                    
-                    <p>
-                        palm9live@gmail.com
-                    </p>
-                    
+            <a href="mailto:palm9live@gmail.com" class="text-decoration-none text-dark">
+                <section class="card h-100 text-center shadow-sm">
+                    <section class="card-body">
+                        <h3>Gmail</h3>
+                        <p class="mb-0">
+                            palm9live@gmail.com
+                        </p>
+                    </section>
                 </section>
-                
-            </section>
-            
+            </a>
         </article>
         
+        <!-- Tarjeta de GitHub -->
         <article class="col-md-4">
-            
-            <section class="card h-100 text-center">
-                
-                <section class="card-body">
-                    
-                    <h3>GitHub</h3>
-                    
-                    <p>
-                        https://github.com/Palm9live
-                    </p>
-                    
+            <a href="https://github.com/Palm9live" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                <section class="card h-100 text-center shadow-sm">
+                    <section class="card-body">
+                        <h3>GitHub</h3>
+                        <p class="mb-0">
+                            https://github.com/Palm9live
+                        </p>
+                    </section>
                 </section>
-                
-            </section>
-            
+            </a>
         </article>
       
     </section>

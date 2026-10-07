@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'
+import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,26 +9,33 @@ import { RouterLink } from '@angular/router'
   styleUrl: './navbar.css',
 })
 export class Navbar {
-   navbar = [
+
+  constructor(public LanguageService: LanguageService
+  ) { }
+
+  navbar: {
+    redirection: string;
+    key: 'NAVBAR_HOME' | 'NAVBAR_ABOUT' | 'NAVBAR_SKILLS' | 'NAVBAR_PROJECTS' | 'NAVBAR_CONTACT';
+  }[] = [
     {
-    redirection: "/",
-    name: "Inicio"
+      redirection: "/",
+      key: 'NAVBAR_HOME'
     },
     {
-    redirection: "/about-me",
-    name: "Sobre mi"
+      redirection: "/about-me",
+      key: "NAVBAR_ABOUT"
     },
     {
-    redirection: "/skills",
-    name: "Habilidades"
+      redirection: "/skills",
+      key: "NAVBAR_SKILLS"
     },
     {
-    redirection: "/projects",
-    name: "Proyectos"
+      redirection: "/projects",
+      key: "NAVBAR_PROJECTS"
     },
     {
-    redirection: "/contact",
-    name: "Contacto"
-    }
+      redirection: "/contact",
+      key: "NAVBAR_CONTACT"
+    },
   ]
 }

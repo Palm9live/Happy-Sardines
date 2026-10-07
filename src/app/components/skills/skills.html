@@ -1,8 +1,14 @@
 <section class="container">
 
     <header class="text-center my-5">
-        <h2>Mis Habilidades</h2>
+        <h1>Mis Habilidades</h1>
     </header>
+
+    <section>
+        <h3>
+            {{languageService.translate('SKILLS_DESCRIPTION')}}
+        </h3>
+    </section>
 
     <section class="row g-4">
 
@@ -11,7 +17,7 @@
                 <section class="card-body">
                     <h3 class="card-title">Angular</h3>
                     <p class="card-text">
-                        Desarrollo de aplicaciones SPA utilizando Angular.
+                        {{ languageService.translate('SKILLS_1') }}
                     </p>
                 </section>
             </section>
@@ -22,18 +28,18 @@
                 <section class="card-body">
                     <h3 class="card-title">TypeScript</h3>
                     <p class="card-text">
-                        Programación tipada para aplicaciones modernas.
+                        {{ languageService.translate('SKILLS_2')}}
                     </p>
                 </section>
             </section>
         </article>
-         
+        
         <article class="col-md-4">
             <section class="card h-100">
                 <section class="card-body">
                     <h3 class="card-title">Bootstrap</h3>
                     <p class="card-text">
-                        Diseño responsive y profesional.
+                        {{ languageService.translate('SKILLS_3')}}
                     </p>
                 </section>
             </section>

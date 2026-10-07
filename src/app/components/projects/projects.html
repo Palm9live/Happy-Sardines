@@ -1,8 +1,14 @@
 <section class="container">
 
     <header class="text-center my-5">
-        <h2>Mis Proyectos</h2>
+        <h1>{{ languageService.translate('PROJECTS_TITLE')}}</h1>
     </header>
+
+    <section>
+        <h3>
+            {{ languageService.translate('PROJECTS_DESCRIPTION')}}
+        </h3>
+    </section>
 
     <section class="row g-4">
 
@@ -11,18 +17,17 @@
             <section class="card h-100">
 
                 <img class="project-image" src="images/home.png" class="card-title">
-                Portfolio Angular
 
                 <h3 class="card-title">
-                    Portfolio Angular
+                    {{ languageService.translate('PROJECTS_1_TITLE')}}
                 </h3>
 
                 <p class="card-text">
-                    Portafolio desarrollado utilizando Angular y Bootstrap.
+                    {{ languageService.translate('PROJECTS_1_DESCRIPTION')}}
                 </p>
 
                 <a href="#" class="btn btn-primary">
-                    Ver Proyecto
+                    {{ languageService.translate('PROJECTS_BUTTOM')}}
                 </a>
 
             </section>
