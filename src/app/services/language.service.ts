@@ -39,6 +39,7 @@ export class LanguageService {
       PROJECTS_BUTTOM: 'Ver Proyecto',
 
       CONTACT_TITLE: 'Contacto',
+      CONTACT_DESCRIPTION: '¿Tienes una idea o quieres conversar sobre desarrollo web? Estos son mis canales de contacto.',
 
     },
 
@@ -71,7 +72,8 @@ export class LanguageService {
       PROJECTS_1_DESCRIPTION: 'Portfolio developed using Angular and Bootstrap',
       PROJECTS_BUTTOM: 'See Project',
 
-      CONTACT_TITLE: 'Contact'
+      CONTACT_TITLE: 'Contact',
+      CONTACT_DESCRIPTION: 'Do you have an idea or want to talk about web development? These are my contact channels.'
     }
 
   };
