@@ -1,0 +1,17 @@
+footer {
+  width: min(100%, 1440px);
+  margin: 3.5rem auto 0;
+  padding: 1.8rem 1.25rem;
+  border-top: 1px solid var(--stage-border);
+  color: var(--stage-muted);
+  text-align: center;
+}
+
+p {
+  margin: 0.25rem 0;
+}
+
+p:first-child {
+  color: var(--stage-text);
+  font-weight: 700;
+}

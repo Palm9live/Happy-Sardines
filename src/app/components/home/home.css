@@ -1,30 +1,108 @@
 .hero {
-    text-align: center;
-    padding: 6rem 1rem;
+  position: relative;
+  display: grid;
+  min-height: min(72vh, 700px);
+  overflow: hidden;
+  place-items: center;
+  padding: clamp(5rem, 12vw, 9rem) 1.25rem;
+  border: 1px solid var(--stage-border);
+  border-radius: 2rem;
+  isolation: isolate;
+  background: linear-gradient(140deg, rgba(12, 32, 74, 0.78), rgba(6, 12, 31, 0.83));
+  box-shadow: var(--stage-shadow);
+}
+
+.hero::before,
+.hero::after,
+.eurovision-lights {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+}
+
+.hero::before {
+  top: -58%;
+  left: 4%;
+  width: 42%;
+  height: 125%;
+  filter: blur(2px);
+  opacity: 0.6;
+  transform: rotate(-22deg);
+  transform-origin: bottom center;
+  background: linear-gradient(to bottom, rgba(53, 214, 255, 0.45), transparent 70%);
+  animation: left-spotlight 6.5s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  top: -56%;
+  right: 6%;
+  width: 45%;
+  height: 124%;
+  filter: blur(4px);
+  opacity: 0.52;
+  transform: rotate(23deg);
+  transform-origin: bottom center;
+  background: linear-gradient(to bottom, rgba(255, 79, 163, 0.42), transparent 72%);
+  animation: right-spotlight 7.4s ease-in-out infinite alternate;
+}
+
+.eurovision-lights {
+  inset: auto 15% -42% 15%;
+  height: 60%;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0.68;
+  background: radial-gradient(ellipse, rgba(145, 93, 255, 0.52), rgba(53, 214, 255, 0.18) 35%, transparent 68%);
+  animation: stage-pulse 4s ease-in-out infinite;
+}
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
+  margin: 0;
+  font-size: clamp(3rem, 10vw, 7.25rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+  background: linear-gradient(100deg, #fff 8%, var(--stage-cyan) 39%, #fff 58%, var(--stage-magenta) 88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 22px rgba(53, 214, 255, 0.25));
 }
 
 .hero h2 {
-    font-size: 2rem;
-    color: #0d6efd;
-    margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
+  color: var(--stage-gold);
+  font-size: clamp(1.1rem, 2.4vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero p {
-    max-width: 700px;
-    margin: auto;
+  max-width: 720px;
+  margin: auto;
+  color: var(--stage-muted);
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.75;
 }
 
-.profile-image {
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
+@keyframes left-spotlight {
+  from { transform: rotate(-30deg) translateX(-5%); }
+  to { transform: rotate(-10deg) translateX(16%); }
 }
 
-:root {
-    --primary-color: #0d6efd;
+@keyframes right-spotlight {
+  from { transform: rotate(30deg) translateX(5%); }
+  to { transform: rotate(10deg) translateX(-16%); }
+}
+
+@keyframes stage-pulse {
+  50% { opacity: 0.95; transform: scale(1.12); }
 }

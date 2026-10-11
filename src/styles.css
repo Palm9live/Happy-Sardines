@@ -1,19 +1,110 @@
-:root {
+body {
 
-    --primary-color: #2563eb;
-    --secondary-color: #1e293b;
+    background:
+        radial-gradient(circle at top left,
+            #6d28d9,
+            transparent 30%),
 
-    --background-color: #f8fafc;
-    --card-color: #ffffff;
+        radial-gradient(circle at top right,
+            #00d4ff,
+            transparent 30%),
 
-    --text-color: #334155;
+        radial-gradient(circle at bottom center,
+            #ff0080,
+            transparent 30%),
 
-    --shadow:
-        0 5px 15px rgba(0,0,0,.1);
+        #050816;
+
+    min-height: 100vh;
+
+    color: rgb(250, 250, 250);
+
+    font-family: 'Segoe UI', sans-serif;
+
+    overflow-x: hidden;
+
+}:root {
+  --stage-ink: #030614;
+  --stage-night: #08132d;
+  --stage-panel: rgba(11, 23, 54, 0.76);
+  --stage-panel-strong: rgba(12, 27, 62, 0.94);
+  --stage-text: #f7f9ff;
+  --stage-muted: #bfcae8;
+  --stage-cyan: #35d6ff;
+  --stage-magenta: #ff4fa3;
+  --stage-violet: #915dff;
+  --stage-gold: #ffd166;
+  --stage-border: rgba(193, 224, 255, 0.22);
+  --stage-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+  --bs-body-bg: var(--stage-ink);
+  --bs-body-color: var(--stage-text);
+  --bs-border-color: var(--stage-border);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--stage-ink);
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--stage-text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse 54% 42% at 12% -8%, rgba(69, 221, 255, 0.24), transparent 68%),
+    radial-gradient(ellipse 50% 38% at 93% 12%, rgba(255, 64, 167, 0.2), transparent 70%),
+    radial-gradient(ellipse 46% 34% at 48% 102%, rgba(137, 84, 255, 0.17), transparent 70%),
+    linear-gradient(145deg, #02040f 0%, var(--stage-night) 48%, #060a1b 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.58;
+  background:
+    linear-gradient(118deg, transparent 39%, rgba(53, 214, 255, 0.11) 48%, transparent 57%),
+    linear-gradient(62deg, transparent 39%, rgba(255, 79, 163, 0.1) 48%, transparent 57%);
+  background-size: 180% 100%, 180% 100%;
+  animation: ambient-light-sweep 15s ease-in-out infinite alternate;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--stage-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--stage-ink);
+  background: var(--stage-gold);
+}
+
+@keyframes ambient-light-sweep {
+  from { background-position: 0% 0%, 100% 0%; }
+  to { background-position: 100% 0%, 0% 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

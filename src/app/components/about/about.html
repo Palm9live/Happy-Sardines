@@ -1,7 +1,25 @@
-<h2>
-    {{ languageService.translate('ABOUT_TITLE') }}
-</h2>
+<section class="about-section">
 
-<p>
-    {{ languageService.translate('ABOUT_DESCRIPTION') }}
-</p>
+    <div class="light-sweep" aria-hidden="true"></div>
+
+    <article class="glass-card">
+
+        <h2>
+            {{ languageService.translate('ABOUT_TITLE') }}
+        </h2>
+
+        <p>
+            {{ languageService.translate('ABOUT_DESCRIPTION') }}
+        </p>
+
+        <p class="about-note">
+            {{ languageService.translate('ABOUT_NOTE') }}
+        </p>
+
+        <ul class="tech-tags" [attr.aria-label]="languageService.translate('ABOUT_TECH_LABEL')">
+            <li>Angular</li>
+            <li>TypeScript</li>
+            <li>Bootstrap</li>
+        </ul>
+    </article>
+</section>

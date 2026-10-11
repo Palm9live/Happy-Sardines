@@ -4,10 +4,10 @@
         <h1>{{ languageService.translate('PROJECTS_TITLE')}}</h1>
     </header>
 
-    <section>
-        <h3>
+    <section class="projects-intro">
+        <p>
             {{ languageService.translate('PROJECTS_DESCRIPTION')}}
-        </h3>
+        </p>
     </section>
 
     <section class="row g-4">
@@ -16,19 +16,25 @@
 
             <section class="card h-100">
 
-                <img class="project-image" src="images/home.png" class="card-title">
+                <img class="project-image" src="images/home.png" [alt]="languageService.translate('PROJECTS_1_TITLE')">
 
-                <h3 class="card-title">
-                    {{ languageService.translate('PROJECTS_1_TITLE')}}
-                </h3>
+                <div class="project-content">
+                    <span class="project-status">
+                        {{ languageService.translate('PROJECTS_1_STATUS') }}
+                    </span>
 
-                <p class="card-text">
-                    {{ languageService.translate('PROJECTS_1_DESCRIPTION')}}
-                </p>
+                    <h3 class="card-title">
+                        {{ languageService.translate('PROJECTS_1_TITLE')}}
+                    </h3>
 
-                <a href="#" class="btn btn-primary">
-                    {{ languageService.translate('PROJECTS_BUTTOM')}}
-                </a>
+                    <p class="card-text">
+                        {{ languageService.translate('PROJECTS_1_DESCRIPTION')}}
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        {{ languageService.translate('PROJECTS_BUTTOM')}}
+                    </a>
+                </div>
 
             </section>
 

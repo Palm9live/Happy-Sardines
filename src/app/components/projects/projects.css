@@ -1,16 +1,92 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+h1 {
+  margin-bottom: 0.75rem;
+  color: var(--stage-text);
+  font-size: clamp(2.15rem, 5vw, 3.7rem);
+  font-weight: 850;
+  text-shadow: 0 0 24px rgba(255, 79, 163, 0.4);
+}
+
+.projects-intro {
+  max-width: 670px;
+  margin: 0 auto 2.25rem;
+  color: var(--stage-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
 .card {
-
-    transition: 0.3s;
-
-    border: none;
-
-    border-radius: 15px;
-
-    box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--stage-border);
+  border-radius: 1.4rem;
+  color: var(--stage-text);
+  background: var(--stage-panel-strong);
+  box-shadow: var(--stage-shadow);
+  transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
 }
 
 .card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 79, 163, 0.58);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.36), 0 0 26px rgba(255, 79, 163, 0.13);
+}
 
-    transform: translateY(-5px);
+.project-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--stage-border);
+}
 
+.project-content {
+  padding: 1.6rem;
+}
+
+.project-status {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--stage-cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.card-title {
+  margin-bottom: 0.85rem;
+  color: var(--stage-text);
+  font-size: 1.55rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.card-text {
+  color: var(--stage-muted);
+  line-height: 1.65;
+}
+
+.btn-primary {
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.05rem;
+  border: 0;
+  border-radius: 999px;
+  color: #061021;
+  font-weight: 800;
+  background: linear-gradient(100deg, var(--stage-cyan), #b8f1ff);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.btn-primary:hover {
+  color: #061021;
+  transform: scale(1.04);
+  box-shadow: 0 0 22px rgba(53, 214, 255, 0.45);
 }

@@ -1,9 +1,80 @@
-.profile-image {
-    width: 220px;
-    border-radius: 50%;
+.about-section {
+  position: relative;
+  display: grid;
+  min-height: 54vh;
+  overflow: hidden;
+  place-items: center;
+  padding: clamp(3rem, 8vw, 6rem) 1.25rem;
+}
+
+.light-sweep {
+  position: absolute;
+  top: -55%;
+  left: 8%;
+  width: 30%;
+  height: 160%;
+  pointer-events: none;
+  opacity: 0.38;
+  transform: rotate(25deg);
+  background: linear-gradient(to bottom, var(--stage-magenta), transparent 66%);
+  filter: blur(12px);
+  animation: about-sweep 8s ease-in-out infinite alternate;
+}
+
+.glass-card {
+  position: relative;
+  width: min(100%, 840px);
+  padding: clamp(2rem, 5vw, 4.25rem);
+  border: 1px solid var(--stage-border);
+  border-radius: 1.75rem;
+  background: var(--stage-panel);
+  box-shadow: var(--stage-shadow);
+  backdrop-filter: blur(16px);
 }
 
 h2 {
-    color: #0d6efd;
-    margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--stage-text);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 0 24px rgba(53, 214, 255, 0.42);
+}
+
+p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--stage-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.about-note {
+  margin-top: 1.2rem;
+  color: var(--stage-text);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-tags li {
+  padding: 0.42rem 0.8rem;
+  border: 1px solid rgba(53, 214, 255, 0.38);
+  border-radius: 999px;
+  color: var(--stage-cyan);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+@keyframes about-sweep {
+  to { transform: rotate(12deg) translateX(150%); }
 }

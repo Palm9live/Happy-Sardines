@@ -23,6 +23,8 @@ export class LanguageService {
 
       ABOUT_TITLE: 'Sobre mí',
       ABOUT_DESCRIPTION: 'Soy estudiante interesado en el desarrollo web y en el aprendizaje continuo de nuevas tecnologías.',
+      ABOUT_NOTE: 'Me gusta convertir ideas en interfaces claras, accesibles y listas para diferentes pantallas.',
+      ABOUT_TECH_LABEL: 'Tecnologías principales',
 
       SKILLS_TITLE: 'Habilidades',
       SKILLS_DESCRIPTION: 'Estas son algunas de las tecnologías que trabajo.',
@@ -54,6 +56,8 @@ export class LanguageService {
 
       ABOUT_TITLE: 'About Me',
       ABOUT_DESCRIPTION: 'I am a student interested in web development and continuous learning of new technologies.',
+      ABOUT_NOTE: 'I enjoy turning ideas into clear, accessible interfaces that work across different screens.',
+      ABOUT_TECH_LABEL: 'Primary technologies',
 
       SKILLS_TITLE: 'Skills',
       SKILLS_DESCRIPTION: 'These are some of the technologies I work with.',
