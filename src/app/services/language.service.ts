@@ -36,6 +36,7 @@ export class LanguageService {
       PROJECTS_DESCRIPTION: 'Estos son algunos de los proyectos que he desarrollado.',
       PROJECTS_1_TITLE: 'Portafolio Angular',
       PROJECTS_1_DESCRIPTION: 'Portafolio desarrollado utilizando Angular y Bootstrap',
+      PROJECTS_1_STATUS: 'Proyecto destacado',
       PROJECTS_BUTTOM: 'Ver Proyecto',
 
       CONTACT_TITLE: 'Contacto',
@@ -70,6 +71,7 @@ export class LanguageService {
       PROJECTS_DESCRIPTION: 'There are some of the projects I have developed.',
       PROJECTS_1_TITLE: 'Porfolio Angular',
       PROJECTS_1_DESCRIPTION: 'Portfolio developed using Angular and Bootstrap',
+      PROJECTS_1_STATUS: 'Featured project',
       PROJECTS_BUTTOM: 'See Project',
 
       CONTACT_TITLE: 'Contact',
